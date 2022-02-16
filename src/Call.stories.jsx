@@ -19,4 +19,5 @@ export const Primary = Template.bind({});
 Primary.args = {
    primary: true,
    label: 'Call',
+   roomName: "my_test_room_1",
 };
