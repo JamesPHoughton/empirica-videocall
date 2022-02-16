@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  setup: # for getting a container for setting things up in.
+    platform: linux/amd64  # needed when developing on apple silicon
+    build: .
+    ports: 
+     - 6006:6006
+    volumes:
+      # need to be careful about overwriting `/node_modules` in container
+      # so instead of copying and mounting full directory, only take the bits we need
+      # hack from https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/#exclude-node_modules-from-the-mount
+      - ./src:/app/src
+      - ./.storybook:/app/.storybook
+      - ./package.json:/app/package.json
+      - ./yarn.lock:/app/yarn.lock
+      - ./tsconfig.json:/app/tsconfig.json
+
