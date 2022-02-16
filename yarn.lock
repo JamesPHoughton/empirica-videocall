@@ -1286,6 +1286,11 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@jitsi/web-sdk@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@jitsi/web-sdk/-/web-sdk-0.2.0.tgz#f7d6c33844cb409574293dc2119d2ad3de7999ad"
+  integrity sha512-8b3K0Wsc+QOvjp9nJsC058LHfZ+55fgZ8BeDrI2EAJA0bXPnhv5pTO9wEJHkYlsWyxo7WlLxF+Tnu2J7fCMg6Q==
+
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.0.5.tgz#68eb521368db76d040a6315cdb24bf2483037b9c"

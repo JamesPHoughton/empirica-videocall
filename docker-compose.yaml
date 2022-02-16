@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  setup: # for getting a container for setting things up in.
+  storybook: # for getting a container for setting things up in.
     platform: linux/amd64  # needed when developing on apple silicon
     build: .
     ports: 
