@@ -1,12 +1,13 @@
 # Empirica Video Call
 
+[![npm version](https://badge.fury.io/js/empirica-videocall.svg)](https://badge.fury.io/js/empirica-videocall) [![storybook badge](https://raw.githubusercontent.com/storybookjs/brand/main/badge/badge-storybook.svg)](https://main--6217e07e3cc586003a3fb15e.chromatic.com)
+
 This package contains a React component for a video call in Empirica. 
 It is designed to mirror the [Empirica Chat](https://github.com/empiricaly/chat) 
 API to the extent possible
 
 This module uses the [Jitsi](https://jitsi.org/) open source video-conferencing platform.
 
-You can view this component's storybook on [chromatic](https://main--6217e07e3cc586003a3fb15e.chromatic.com).
 
 <!-- TODO: package and include installation instructions -->
 <!-- Add to your Empirica project with:
