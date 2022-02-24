@@ -24,8 +24,7 @@ export default class Call extends React.PureComponent {
                     configOverwrite={{  // options here: https://github.com/jitsi/jitsi-meet/blob/master/config.js
                         enableWelcomePage: false,  // this doesn't seem to be working...
                         readOnlyName: true,
-                        //toolbarButtons: ['camera', 'microphone'],
-                        toolbarButtons: ['camera'],
+                        toolbarButtons: ['camera', 'microphone'],
                         enableCalendarIntegration: false
                     }}
                     interfaceConfigOverwrite={{

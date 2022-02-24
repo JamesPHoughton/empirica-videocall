@@ -1,8 +1,9 @@
 {
-  "name": "videocall",
+  "name": "empirica-videocall",
   "version": "0.0.1",
   "description": "react component for video calls in empirica",
   "main": "./build/index.js",
+  "files": ["build"],
   "repository": "https://github.com/JamesPHoughton/empirica-videocall",
   "author": "James P. Houghton",
   "license": "MIT",
@@ -38,6 +39,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "chromatic": "chromatic --exit-zero-on-changes"
   }
 }

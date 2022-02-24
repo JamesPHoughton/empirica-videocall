@@ -6,6 +6,8 @@ API to the extent possible
 
 This module uses the [Jitsi](https://jitsi.org/) open source video-conferencing platform.
 
+You can view this component's storybook on [chromatic](https://main--6217e07e3cc586003a3fb15e.chromatic.com).
+
 <!-- TODO: package and include installation instructions -->
 <!-- Add to your Empirica project with:
 
@@ -233,3 +235,5 @@ component on the example found in `./src/LobbyChat.js`.
 This is best developed using a docker container. With the docker daemon running, type `docker-compose up`.
 
 To build the package, run `yarn run build` within the container.
+
+on github commit, will build storybook and publish to chromatic 
