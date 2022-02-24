@@ -11,7 +11,9 @@ services:
       # hack from https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/#exclude-node_modules-from-the-mount
       - ./src:/app/src
       - ./.storybook:/app/.storybook
+      - ./build:/app/build
       - ./package.json:/app/package.json
       - ./yarn.lock:/app/yarn.lock
       - ./tsconfig.json:/app/tsconfig.json
+      - ./rollup.config.js:/app/rollup.config.js
 

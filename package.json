@@ -2,13 +2,16 @@
   "name": "videocall",
   "version": "0.0.1",
   "description": "react component for video calls in empirica",
-  "main": "index.js",
+  "main": "./build/index.js",
   "repository": "https://github.com/JamesPHoughton/empirica-videocall",
   "author": "James P. Houghton",
   "license": "MIT",
   "private": false,
   "devDependencies": {
     "@babel/core": "^7.17.4",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -19,6 +22,9 @@
     "babel-loader": "^8.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rollup": "^2.68.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.5.5"
   },
   "peerDependencies": {
@@ -30,6 +36,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "rollup --config"
   }
 }

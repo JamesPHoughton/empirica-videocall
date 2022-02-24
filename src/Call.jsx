@@ -11,7 +11,8 @@ export default class Call extends React.PureComponent {
     };
 
     render () {
-        const {roomName} = this.props;
+        const {roomName, player} = this.props;
+        
         return(
             <div>
                 <JitsiMeeting
@@ -19,6 +20,17 @@ export default class Call extends React.PureComponent {
                     roomName={roomName}
                     onApiReady={externalApi => {this.api = externalApi}}
                     getIFrameRef={this.handleJitsiIFrameRef}
+                    userInfo={{displayName: player.get("name")}}
+                    configOverwrite={{  // options here: https://github.com/jitsi/jitsi-meet/blob/master/config.js
+                        enableWelcomePage: false,  // this doesn't seem to be working...
+                        readOnlyName: true,
+                        toolbarButtons: ['camera', 'microphone'],
+                        enableCalendarIntegration: false
+                    }}
+                    interfaceConfigOverwrite={{
+                        SHOW_CHROME_EXTENSION_BANNER: false,
+                        SHOW_JITSI_WATERMARK: false
+                    }}
                 />
             </div>
         )
@@ -27,4 +39,5 @@ export default class Call extends React.PureComponent {
 
 Call.propTypes = {
     roomName: PropTypes.object.isRequired,
+    player: PropTypes.object.isRequired,
 }
