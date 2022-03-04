@@ -9,6 +9,8 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
+const DEFAULT_DOMAIN = 'meet.jit.si';
+
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -68,7 +70,7 @@ let scriptPromise;
  * @returns {Promise<JitsiMeetExternalApi>} - the JitsiMeetExternalAPI or an error
  */
 
-const fetchExternalApi = domain => {
+const fetchExternalApi = (domain = DEFAULT_DOMAIN) => {
   if (scriptPromise) {
     return scriptPromise;
   }
@@ -81,7 +83,7 @@ const fetchExternalApi = domain => {
  * Returns the complete room name
  *
  * @param {string} roomName
- * @param {string | undefined} tenant
+ * @param {string} tenant
  * @returns {string} the complete room name
  */
 let instancesCounter = 0;
@@ -111,7 +113,7 @@ const generateComponentId = prefix => `${prefix}-${instancesCounter++}`;
  */
 
 const JitsiMeeting = ({
-  domain,
+  domain = DEFAULT_DOMAIN,
   roomName,
   configOverwrite,
   interfaceConfigOverwrite,
@@ -121,6 +123,7 @@ const JitsiMeeting = ({
   userInfo,
   spinner: Spinner,
   onApiReady,
+  onReadyToClose,
   getIFrameRef
 }) => {
   const [componentId, setComponentId] = React.useState('');
@@ -150,10 +153,16 @@ const JitsiMeeting = ({
     setLoading(false);
 
     if (apiRef.current) {
-      onApiReady(apiRef.current);
-      getIFrameRef && meetingRef.current && getIFrameRef(meetingRef.current);
+      typeof onApiReady === 'function' && onApiReady(apiRef.current);
+      apiRef.current.on('readyToClose', () => {
+        typeof onReadyToClose === 'function' && onReadyToClose();
+      });
+
+      if (meetingRef.current && typeof getIFrameRef === 'function') {
+        getIFrameRef(meetingRef.current);
+      }
     }
-  }, [apiRef, meetingRef, onApiReady, getIFrameRef, domain, roomName, configOverwrite, interfaceConfigOverwrite, jwt, invitees, devices, userInfo]);
+  }, [apiRef, meetingRef, onApiReady, onReadyToClose, getIFrameRef, domain, roomName, configOverwrite, interfaceConfigOverwrite, jwt, invitees, devices, userInfo]);
   React.useEffect(() => {
     if (apiLoaded && !apiRef.current) {
       if (externalApi.current) {

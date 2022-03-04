@@ -1,9 +1,11 @@
 {
   "name": "empirica-videocall",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react component for video calls in empirica",
   "main": "./build/index.js",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "repository": "https://github.com/JamesPHoughton/empirica-videocall",
   "author": "James P. Houghton",
   "license": "MIT",
@@ -34,7 +36,7 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@jitsi/web-sdk": "^0.2.0"
+    "@jitsi/react-sdk": "^1.0.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",

@@ -1,4 +1,4 @@
-import { JitsiMeeting } from '@jitsi/web-sdk';
+import { JitsiMeeting } from '@jitsi/react-sdk';
 import PropTypes from "prop-types";
 import React from "react";
 
