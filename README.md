@@ -9,19 +9,18 @@ API to the extent possible
 This module uses the [Jitsi](https://jitsi.org/) open source video-conferencing platform.
 
 
-<!-- TODO: package and include installation instructions -->
-<!-- Add to your Empirica project with:
+Add to your Empirica project with:
 
 ```sh
 
-meteor npm install --save @empirica/chat
+meteor npm install --save empirica-videocall
 
-``` -->
+```
 
 ## Usage
 
 ```jsx
-import { Call } from "@empirica/videoCall";
+import { Call } from "empirica-videocall";
 
 //...
 
