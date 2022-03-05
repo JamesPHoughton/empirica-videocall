@@ -9,7 +9,200 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
-const DEFAULT_DOMAIN = 'meet.jit.si';
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  Object.defineProperty(subClass, "prototype", {
+    writable: false
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+var DEFAULT_DOMAIN = 'meet.jit.si';
 
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
@@ -43,25 +236,42 @@ var __awaiter = undefined && undefined.__awaiter || function (thisArg, _argument
   });
 };
 
-const loadExternalApi = domain => __awaiter(void 0, void 0, void 0, function* () {
-  return new Promise((resolve, reject) => {
-    if (window.JitsiMeetExternalAPI) {
-      return resolve(window.JitsiMeetExternalAPI);
-    }
+var loadExternalApi = function loadExternalApi(domain) {
+  return __awaiter(void 0, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            return _context.abrupt("return", new Promise(function (resolve, reject) {
+              if (window.JitsiMeetExternalAPI) {
+                return resolve(window.JitsiMeetExternalAPI);
+              }
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://${domain}/external_api.js`;
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = "https://".concat(domain, "/external_api.js");
 
-    script.onload = () => resolve(window.JitsiMeetExternalAPI);
+              script.onload = function () {
+                return resolve(window.JitsiMeetExternalAPI);
+              };
 
-    script.onerror = () => reject(new Error(`Script load error: ${script.src}`));
+              script.onerror = function () {
+                return reject(new Error("Script load error: ".concat(script.src)));
+              };
 
-    document.head.appendChild(script);
-  });
-});
+              document.head.appendChild(script);
+            }));
 
-let scriptPromise;
+          case 1:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+};
+
+var scriptPromise;
 /**
  * Injects the external_api.js script for the corresponding domain in DOM
  * and resolves with either the `JitsiMeetExternalApi` class definition or an error
@@ -70,7 +280,9 @@ let scriptPromise;
  * @returns {Promise<JitsiMeetExternalApi>} - the JitsiMeetExternalAPI or an error
  */
 
-const fetchExternalApi = (domain = DEFAULT_DOMAIN) => {
+var fetchExternalApi = function fetchExternalApi() {
+  var domain = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_DOMAIN;
+
   if (scriptPromise) {
     return scriptPromise;
   }
@@ -86,14 +298,16 @@ const fetchExternalApi = (domain = DEFAULT_DOMAIN) => {
  * @param {string} tenant
  * @returns {string} the complete room name
  */
-let instancesCounter = 0;
+var instancesCounter = 0;
 /**
  * Generates an unique id
  * @param {string} prefix
  * @returns {string} the component id
  */
 
-const generateComponentId = prefix => `${prefix}-${instancesCounter++}`;
+var generateComponentId = function generateComponentId(prefix) {
+  return "".concat(prefix, "-").concat(instancesCounter++);
+};
 
 /**
  * Returns the JitsiMeeting Component with access to a custom External API
@@ -112,49 +326,64 @@ const generateComponentId = prefix => `${prefix}-${instancesCounter++}`;
   ```
  */
 
-const JitsiMeeting = ({
-  domain = DEFAULT_DOMAIN,
-  roomName,
-  configOverwrite,
-  interfaceConfigOverwrite,
-  jwt,
-  invitees,
-  devices,
-  userInfo,
-  spinner: Spinner,
-  onApiReady,
-  onReadyToClose,
-  getIFrameRef
-}) => {
-  const [componentId, setComponentId] = React.useState('');
-  const [loading, setLoading] = React.useState(true);
-  const [apiLoaded, setApiLoaded] = React.useState(false);
-  const externalApi = React.useRef();
-  const apiRef = React.useRef();
-  const meetingRef = React.useRef(null);
-  React.useEffect(() => {
+var JitsiMeeting = function JitsiMeeting(_ref) {
+  var _ref$domain = _ref.domain,
+      domain = _ref$domain === void 0 ? DEFAULT_DOMAIN : _ref$domain,
+      roomName = _ref.roomName,
+      configOverwrite = _ref.configOverwrite,
+      interfaceConfigOverwrite = _ref.interfaceConfigOverwrite,
+      jwt = _ref.jwt,
+      invitees = _ref.invitees,
+      devices = _ref.devices,
+      userInfo = _ref.userInfo,
+      Spinner = _ref.spinner,
+      onApiReady = _ref.onApiReady,
+      onReadyToClose = _ref.onReadyToClose,
+      getIFrameRef = _ref.getIFrameRef;
+
+  var _useState = React.useState(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      componentId = _useState2[0],
+      setComponentId = _useState2[1];
+
+  var _useState3 = React.useState(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      loading = _useState4[0],
+      setLoading = _useState4[1];
+
+  var _useState5 = React.useState(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      apiLoaded = _useState6[0],
+      setApiLoaded = _useState6[1];
+
+  var externalApi = React.useRef();
+  var apiRef = React.useRef();
+  var meetingRef = React.useRef(null);
+  React.useEffect(function () {
     setComponentId(generateComponentId('jitsiMeeting'));
-    fetchExternalApi(domain).then(api => {
+    fetchExternalApi(domain).then(function (api) {
       externalApi.current = api;
       setApiLoaded(true);
-    }).catch(e => console.error(e.message));
+    })["catch"](function (e) {
+      return console.error(e.message);
+    });
   }, []);
-  const loadIFrame = React.useCallback(JitsiMeetExternalAPI => {
+  var loadIFrame = React.useCallback(function (JitsiMeetExternalAPI) {
     apiRef.current = new JitsiMeetExternalAPI(domain, {
-      roomName,
-      configOverwrite,
-      interfaceConfigOverwrite,
-      jwt,
-      invitees,
-      devices,
-      userInfo,
+      roomName: roomName,
+      configOverwrite: configOverwrite,
+      interfaceConfigOverwrite: interfaceConfigOverwrite,
+      jwt: jwt,
+      invitees: invitees,
+      devices: devices,
+      userInfo: userInfo,
       parentNode: meetingRef.current
     });
     setLoading(false);
 
     if (apiRef.current) {
       typeof onApiReady === 'function' && onApiReady(apiRef.current);
-      apiRef.current.on('readyToClose', () => {
+      apiRef.current.on('readyToClose', function () {
         typeof onReadyToClose === 'function' && onReadyToClose();
       });
 
@@ -163,14 +392,14 @@ const JitsiMeeting = ({
       }
     }
   }, [apiRef, meetingRef, onApiReady, onReadyToClose, getIFrameRef, domain, roomName, configOverwrite, interfaceConfigOverwrite, jwt, invitees, devices, userInfo]);
-  React.useEffect(() => {
+  React.useEffect(function () {
     if (apiLoaded && !apiRef.current) {
       if (externalApi.current) {
         loadIFrame(externalApi.current);
       }
     }
   }, [apiLoaded, loadIFrame]);
-  const renderLoadingSpinner = React.useCallback(() => {
+  var renderLoadingSpinner = React.useCallback(function () {
     if (!Spinner) {
       return null;
     }
@@ -192,7 +421,9 @@ const JitsiMeeting = ({
 undefined && undefined.__rest || function (s, e) {
   var t = {};
 
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
 
   if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
     if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
@@ -206,37 +437,28 @@ var reactIs = {exports: {}};
 
 var reactIs_production_min = {};
 
-/** @license React v16.13.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var b = "function" === typeof Symbol && Symbol.for,
-    c = b ? Symbol.for("react.element") : 60103,
-    d = b ? Symbol.for("react.portal") : 60106,
-    e = b ? Symbol.for("react.fragment") : 60107,
-    f = b ? Symbol.for("react.strict_mode") : 60108,
-    g = b ? Symbol.for("react.profiler") : 60114,
-    h = b ? Symbol.for("react.provider") : 60109,
-    k = b ? Symbol.for("react.context") : 60110,
-    l = b ? Symbol.for("react.async_mode") : 60111,
-    m = b ? Symbol.for("react.concurrent_mode") : 60111,
-    n = b ? Symbol.for("react.forward_ref") : 60112,
-    p = b ? Symbol.for("react.suspense") : 60113,
-    q = b ? Symbol.for("react.suspense_list") : 60120,
-    r = b ? Symbol.for("react.memo") : 60115,
-    t = b ? Symbol.for("react.lazy") : 60116,
-    v = b ? Symbol.for("react.block") : 60121,
-    w = b ? Symbol.for("react.fundamental") : 60117,
-    x = b ? Symbol.for("react.responder") : 60118,
-    y = b ? Symbol.for("react.scope") : 60119;
+var b = "function" === typeof Symbol && Symbol["for"],
+    c = b ? Symbol["for"]("react.element") : 60103,
+    d = b ? Symbol["for"]("react.portal") : 60106,
+    e = b ? Symbol["for"]("react.fragment") : 60107,
+    f = b ? Symbol["for"]("react.strict_mode") : 60108,
+    g = b ? Symbol["for"]("react.profiler") : 60114,
+    h = b ? Symbol["for"]("react.provider") : 60109,
+    k = b ? Symbol["for"]("react.context") : 60110,
+    l = b ? Symbol["for"]("react.async_mode") : 60111,
+    m = b ? Symbol["for"]("react.concurrent_mode") : 60111,
+    n = b ? Symbol["for"]("react.forward_ref") : 60112,
+    p = b ? Symbol["for"]("react.suspense") : 60113,
+    q = b ? Symbol["for"]("react.suspense_list") : 60120,
+    r = b ? Symbol["for"]("react.memo") : 60115,
+    t = b ? Symbol["for"]("react.lazy") : 60116,
+    v = b ? Symbol["for"]("react.block") : 60121,
+    w = b ? Symbol["for"]("react.fundamental") : 60117,
+    x = b ? Symbol["for"]("react.responder") : 60118,
+    y = b ? Symbol["for"]("react.scope") : 60119;
 
 function z(a) {
-  if ("object" === typeof a && null !== a) {
+  if ("object" === _typeof(a) && null !== a) {
     var u = a.$$typeof;
 
     switch (u) {
@@ -304,7 +526,7 @@ reactIs_production_min.isContextProvider = function (a) {
 };
 
 reactIs_production_min.isElement = function (a) {
-  return "object" === typeof a && null !== a && a.$$typeof === c;
+  return "object" === _typeof(a) && null !== a && a.$$typeof === c;
 };
 
 reactIs_production_min.isForwardRef = function (a) {
@@ -340,55 +562,46 @@ reactIs_production_min.isSuspense = function (a) {
 };
 
 reactIs_production_min.isValidElementType = function (a) {
-  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === typeof a && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === w || a.$$typeof === x || a.$$typeof === y || a.$$typeof === v);
+  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === _typeof(a) && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === w || a.$$typeof === x || a.$$typeof === y || a.$$typeof === v);
 };
 
 reactIs_production_min.typeOf = z;
 
 var reactIs_development = {};
 
-/** @license React v16.13.1
- * react-is.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 if (process.env.NODE_ENV !== "production") {
   (function () {
     // nor polyfill, then a plain number is used for performance.
 
-    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    var hasSymbol = typeof Symbol === 'function' && Symbol["for"];
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol["for"]('react.element') : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol["for"]('react.portal') : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol["for"]('react.fragment') : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.strict_mode') : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol["for"]('react.profiler') : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol["for"]('react.provider') : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol["for"]('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
     // (unstable) APIs that have been removed. Can we remove the symbols?
 
-    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol["for"]('react.async_mode') : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.concurrent_mode') : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol["for"]('react.forward_ref') : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol["for"]('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol["for"]('react.suspense_list') : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol["for"]('react.memo') : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol["for"]('react.lazy') : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol["for"]('react.block') : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol["for"]('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol["for"]('react.responder') : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol["for"]('react.scope') : 0xead7;
 
     function isValidElementType(type) {
       return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || _typeof(type) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
     }
 
     function typeOf(object) {
-      if (typeof object === 'object' && object !== null) {
+      if (_typeof(object) === 'object' && object !== null) {
         var $$typeof = object.$$typeof;
 
         switch ($$typeof) {
@@ -469,7 +682,7 @@ if (process.env.NODE_ENV !== "production") {
     }
 
     function isElement(object) {
-      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+      return _typeof(object) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
     }
 
     function isForwardRef(object) {
@@ -649,21 +862,14 @@ var ReactPropTypesSecret_1 = ReactPropTypesSecret$3;
 
 var has$2 = Function.call.bind(Object.prototype.hasOwnProperty);
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var printWarning$1 = function () {};
+var printWarning$1 = function printWarning() {};
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactPropTypesSecret$2 = ReactPropTypesSecret_1;
   var loggedTypeFailures = {};
   var has$1 = has$2;
 
-  printWarning$1 = function (text) {
+  printWarning$1 = function printWarning(text) {
     var message = 'Warning: ' + text;
 
     if (typeof console !== 'undefined') {
@@ -705,7 +911,7 @@ function checkPropTypes$1(typeSpecs, values, location, componentName, getStack) 
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
           if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
+            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
             err.name = 'Invariant Violation';
             throw err;
           }
@@ -716,7 +922,7 @@ function checkPropTypes$1(typeSpecs, values, location, componentName, getStack) 
         }
 
         if (error && !(error instanceof Error)) {
-          printWarning$1((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + typeof error + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
+          printWarning$1((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + _typeof(error) + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
         }
 
         if (error instanceof Error && !(error.message in loggedTypeFailures)) {
@@ -745,23 +951,16 @@ checkPropTypes$1.resetWarningCache = function () {
 
 var checkPropTypes_1 = checkPropTypes$1;
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 var ReactIs$1 = reactIs.exports;
 var assign = objectAssign;
 var ReactPropTypesSecret$1 = ReactPropTypesSecret_1;
 var has = has$2;
 var checkPropTypes = checkPropTypes_1;
 
-var printWarning = function () {};
+var printWarning = function printWarning() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  printWarning = function (text) {
+  printWarning = function printWarning(text) {
     var message = 'Warning: ' + text;
 
     if (typeof console !== 'undefined') {
@@ -781,7 +980,7 @@ function emptyFunctionThatReturnsNull() {
   return null;
 }
 
-var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
+var factoryWithTypeCheckers = function factoryWithTypeCheckers(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
   var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
   var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
@@ -911,7 +1110,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
 
   function PropTypeError(message, data) {
     this.message = message;
-    this.data = data && typeof data === 'object' ? data : {};
+    this.data = data && _typeof(data) === 'object' ? data : {};
     this.stack = '';
   } // Make `instanceof Error` still work for returned errors.
 
@@ -1249,7 +1448,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
   }
 
   function isNode(propValue) {
-    switch (typeof propValue) {
+    switch (_typeof(propValue)) {
       case 'number':
       case 'string':
       case 'undefined':
@@ -1328,7 +1527,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
 
 
   function getPropType(propValue) {
-    var propType = typeof propValue;
+    var propType = _typeof(propValue);
 
     if (Array.isArray(propValue)) {
       return 'array';
@@ -1418,7 +1617,7 @@ function emptyFunctionWithReset() {}
 
 emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-var factoryWithThrowingShims = function () {
+var factoryWithThrowingShims = function factoryWithThrowingShims() {
   function shim(props, propName, componentName, location, propFullName, secret) {
     if (secret === ReactPropTypesSecret) {
       // It is still safe when called from React.
@@ -1484,44 +1683,67 @@ if (process.env.NODE_ENV !== 'production') {
 
 var PropTypes = propTypes.exports;
 
-class Call extends React__default["default"].PureComponent {
-  handleJitsiIFrameRef = iframeRef => {
-    iframeRef.style.border = '10px solid cadetblue';
-    iframeRef.style.background = 'cadetblue';
-    iframeRef.style.height = '400px';
-  };
+var Call = /*#__PURE__*/function (_React$PureComponent) {
+  _inherits(Call, _React$PureComponent);
 
-  render() {
-    const {
-      roomName,
-      player
-    } = this.props;
-    return /*#__PURE__*/React__default["default"].createElement("div", null, /*#__PURE__*/React__default["default"].createElement(JitsiMeeting, {
-      domain: "meet.jit.si",
-      roomName: roomName,
-      onApiReady: externalApi => {
-        this.api = externalApi;
-      },
-      getIFrameRef: this.handleJitsiIFrameRef,
-      userInfo: {
-        displayName: player.get("name")
-      },
-      configOverwrite: {
-        // options here: https://github.com/jitsi/jitsi-meet/blob/master/config.js
-        enableWelcomePage: false,
-        // this doesn't seem to be working...
-        readOnlyName: true,
-        toolbarButtons: ['camera', 'microphone'],
-        enableCalendarIntegration: false
-      },
-      interfaceConfigOverwrite: {
-        SHOW_CHROME_EXTENSION_BANNER: false,
-        SHOW_JITSI_WATERMARK: false
-      }
-    }));
+  var _super = _createSuper(Call);
+
+  function Call() {
+    var _this;
+
+    _classCallCheck(this, Call);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "handleJitsiIFrameRef", function (iframeRef) {
+      iframeRef.style.border = '10px solid cadetblue';
+      iframeRef.style.background = 'cadetblue';
+      iframeRef.style.height = '400px';
+    });
+
+    return _this;
   }
 
-}
+  _createClass(Call, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          roomName = _this$props.roomName,
+          player = _this$props.player;
+      return /*#__PURE__*/React__default["default"].createElement("div", null, /*#__PURE__*/React__default["default"].createElement(JitsiMeeting, {
+        domain: "meet.jit.si",
+        roomName: roomName,
+        onApiReady: function onApiReady(externalApi) {
+          _this2.api = externalApi;
+        },
+        getIFrameRef: this.handleJitsiIFrameRef,
+        userInfo: {
+          displayName: player.get("name")
+        },
+        configOverwrite: {
+          // options here: https://github.com/jitsi/jitsi-meet/blob/master/config.js
+          enableWelcomePage: false,
+          // this doesn't seem to be working...
+          readOnlyName: true,
+          toolbarButtons: ['camera', 'microphone'],
+          enableCalendarIntegration: false
+        },
+        interfaceConfigOverwrite: {
+          SHOW_CHROME_EXTENSION_BANNER: false,
+          SHOW_JITSI_WATERMARK: false
+        }
+      }));
+    }
+  }]);
+
+  return Call;
+}(React__default["default"].PureComponent);
 Call.propTypes = {
   roomName: PropTypes.object.isRequired,
   player: PropTypes.object.isRequired

@@ -2,7 +2,6 @@
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import babel from '@rollup/plugin-babel';
-import typescript from "rollup-plugin-typescript2";
 import commonjs from "@rollup/plugin-commonjs";
 
 const packageJson = require("./package.json");
@@ -19,9 +18,7 @@ export default {
         resolve(),
         commonjs(), // must be before babel plugin
         babel({
-            presets: ["@babel/preset-react"]
+            presets: ["@babel/preset-env", "@babel/preset-react"]
         }),
-        typescript({ useTsconfigDeclarationDir: true }),
-        
     ]
 }

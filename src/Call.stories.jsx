@@ -14,7 +14,7 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template = (args) => <Call {...args} />;
 
-const Player = {
+const player = {
   data: {"name": "Ponder Stibbons"},
   get (key) {
     return this.data[key];
@@ -25,8 +25,6 @@ const Player = {
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
 Primary.args = {
-   primary: true,
-   label: 'Call',
    roomName: "my_test_room_1",
-   player: Player
+   player: player
 };

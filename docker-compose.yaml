@@ -4,7 +4,7 @@ services:
     platform: linux/amd64  # needed when developing on apple silicon
     build: .
     ports: 
-     - 6006:6006
+     - 60060:6006
     volumes:
       # need to be careful about overwriting `/node_modules` in container
       # so instead of copying and mounting full directory, only take the bits we need
@@ -14,6 +14,5 @@ services:
       - ./build:/app/build
       - ./package.json:/app/package.json
       - ./yarn.lock:/app/yarn.lock
-      - ./tsconfig.json:/app/tsconfig.json
       - ./rollup.config.js:/app/rollup.config.js
 
