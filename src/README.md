@@ -14,8 +14,10 @@ https://www.ultimateakash.com/blog-details/IiwzOGAKYAo=/How-to-Integrate-Jitsi-m
 https://github.com/jitsi/jitsi-meet/blob/master/interface_config.js
 
 
-## Building a component libarary
+## Building a component libarary with Rollup
 https://blog.harveydelaney.com/creating-your-own-react-component-library/
+https://blog.bitsrc.io/trying-rollup-for-react-applications-d3c2304d16bf
+
 
 # todo:
 

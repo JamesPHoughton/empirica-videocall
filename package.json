@@ -1,6 +1,6 @@
 {
   "name": "empirica-videocall",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "react component for video calls in empirica",
   "main": "./build/index.js",
   "files": [
@@ -32,8 +32,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.2",
-    "react-dom": "^16.8.0 || ^17.0.2"
+    "react": "16.x || 17.x",
+    "react-dom": "16.x || 17.x"
   },
   "dependencies": {
     "@jitsi/react-sdk": "^1.0.0"
