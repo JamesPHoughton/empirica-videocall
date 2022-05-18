@@ -11,7 +11,7 @@ export default class Call extends React.PureComponent {
     };
 
     render () {
-        const {roomName, player} = this.props;
+        const {roomName, displayName} = this.props;
         
         return(
             <div>
@@ -20,16 +20,18 @@ export default class Call extends React.PureComponent {
                     roomName={roomName}
                     onApiReady={externalApi => {this.api = externalApi}}
                     getIFrameRef={this.handleJitsiIFrameRef}
-                    userInfo={{displayName: player.get("name")}}
+                    userInfo={{displayName: displayName}}
                     configOverwrite={{  // options here: https://github.com/jitsi/jitsi-meet/blob/master/config.js
                         enableWelcomePage: false,  // this doesn't seem to be working...
                         readOnlyName: true,
                         toolbarButtons: ['camera', 'microphone'],
-                        enableCalendarIntegration: false
+                        enableCalendarIntegration: false,
                     }}
                     interfaceConfigOverwrite={{
                         SHOW_CHROME_EXTENSION_BANNER: false,
-                        SHOW_JITSI_WATERMARK: false
+                        SHOW_JITSI_WATERMARK: false,
+                        MOBILE_APP_PROMO: false,  // Whether the mobile app Jitsi Meet is to be promoted to participants attempting to join a conference in a mobile Web browser.
+                        
                     }}
                 />
             </div>
