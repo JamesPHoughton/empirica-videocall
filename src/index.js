@@ -1,1 +1,1 @@
-export { default as Call } from "./Call.jsx";
+export { default as VideoCall } from "./VideoCall.jsx";
