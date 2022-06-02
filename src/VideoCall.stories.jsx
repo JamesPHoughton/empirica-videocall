@@ -1,6 +1,6 @@
 import React from 'react';
 
-import VideoCall from './VideoCall';
+import { VideoCall } from './VideoCall';
 
 export default {
   /* 👇 The title prop is optional.
@@ -13,7 +13,6 @@ export default {
 
 //👇 We create a “template” of how args map to rendering
 const Template = (args) => <VideoCall {...args} />;
-
 
 
 //👇 Each story then reuses that template

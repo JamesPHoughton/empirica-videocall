@@ -29,16 +29,15 @@ import { Call } from "empirica-videocall";
 
 `Call` expects 2 required props:
 
-- `player`: the current player
+- `playerName`: a handle that will be displayed as the player's name to other participants
 - `roomName`: an identifier that will create a unique room. The round id is a good choice.
-
-`Call` also displays a name for each participant, which you need to set
-in the experiment independently of the `playerId`: `player.set('name', "myPseudonym")`
 
 
 # Development
 
 This is best developed using a docker container. With the docker daemon running, type `docker-compose up`.
+
+This will launch storybook with the component, and changes to the component will be reflected in storybook. You can view the storybook at http://localhost:6006
 
 To build the package, run `yarn run build` within the container.
 

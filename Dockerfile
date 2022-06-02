@@ -9,6 +9,5 @@ RUN npm install
 
 COPY .storybook ./storybook
 COPY src ./src
-COPY build ./build
 
 CMD ["npm", "run", "storybook"]
