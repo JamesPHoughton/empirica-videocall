@@ -24,7 +24,7 @@ import { Call } from "empirica-videocall";
 
 //...
 
-<Call player={player} roomName={"roomname goes here"} />;
+<Call playerName={playerName} roomName={"roomname goes here"} />;
 ```
 
 `Call` expects 2 required props:
