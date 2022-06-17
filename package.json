@@ -36,12 +36,15 @@
     "react-dom": "16.x || 17.x"
   },
   "dependencies": {
-    "@jitsi/react-sdk": "^1.0.0"
+    "@jitsi/react-sdk": "^1.0.0",
+    "eyeson": "^1.8.1",
+    "node-fetch": "^3.2.6"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup --config",
     "chromatic": "chromatic --exit-zero-on-changes"
-  }
+  },
+  "type": "module"
 }
