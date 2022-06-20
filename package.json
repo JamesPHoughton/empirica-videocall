@@ -36,9 +36,8 @@
     "react-dom": "16.x || 17.x"
   },
   "dependencies": {
-    "@jitsi/react-sdk": "^1.0.0",
-    "eyeson": "^1.8.1",
-    "node-fetch": "^3.2.6"
+    "axios": "^0.27.2",
+    "eyeson": "^1.8.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",

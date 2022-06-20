@@ -49,6 +49,7 @@ export function VideoCall ({playerName, roomName}) {
 
   const startSession = async () => {
     const access_key = await GetRoomKey(playerName, roomName);
+    console.log(access_key);
     eyeson.start(access_key);
   }
 
